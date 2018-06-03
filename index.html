@@ -1,0 +1,35 @@
+<!doctype html>
+<style>
+	.app {
+		display:flex;
+		height: 100%;
+		width: 100%;
+		justify-content: space-evenly;
+		align-items: center;
+	}
+	.feed {
+		height: 80%;
+		width: 50%;
+		/*margin-left: 1%;
+		margin-right: 1%;*/
+	}
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
+<link rel="stylesheet" href="github-activity.css">
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
+<script type="text/javascript" src="github-activity.js"></script>
+
+<section class="app">
+	<div id="tu" class="feed"></div>
+</section>
+
+<script>
+	GitHubActivity.feed({
+		username: "turquoise-turtle",
+		//repository: "your-repo", // optional
+		selector: "#tu",
+		//limit: 20 // optional
+	});
+	
+</script>
