@@ -22,12 +22,19 @@
 
 <section class="app">
 	<div id="te" class="feed"></div>
+	<div id="fp" class="feed"></div>
 </section>
 
 <script>
 	GitHubActivity.feed({
 		username: "technikodev",
-		//repository: "your-repo", // optional
+		repository: "share-doc-to-classroom", // optional
+		selector: "#te",
+		//limit: 20 // optional
+	});
+	GitHubActivity.feed({
+		username: "technikodev",
+		repository: "focus-popup", // optional
 		selector: "#te",
 		//limit: 20 // optional
 	});
