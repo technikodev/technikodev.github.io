@@ -2,14 +2,76 @@
 <style>
 	body {
 		font-family: sans-serif;
+		background-color: black;
 	}
 	.main {
 		text-align: center;
+		color: white;
+		
+	}
+	.herotitle {
+		font-size: 2em;
+		margin-top: 15%;
+		margin-bottom: 0;
+	}
+	.msg {
+		font-size: 1em;
+	}
+	a {
+		color: white;
+	}
+	/*https://30-seconds.github.io/30-seconds-of-css/#hover-underline-animation*/
+	a {
+	  display: inline-block;
+	  position: relative;
+	  text-decoration: none;
+	}
+	a:active {
+		color: black;
+		background-color: white;
+	}
+	a::after {
+	  content: '';
+	  position: absolute;
+	  width: 100%;
+	  transform: scaleX(0);
+	  height: 2px;
+	  bottom: 0;
+	  left: 0;
+	  background-color: white;
+	  transform-origin: bottom right;
+	  transition: transform 0.4s ease-out;
+	}
+	a:hover::after {
+	  transform: scaleX(1);
+	  transform-origin: bottom left;
+	}
+	
+	@media screen and (min-width: 300px) {
+		.herotitle {
+			font-size: 4em;
+		}
+	}
+	@media screen and (min-width: 500px) {
+		.herotitle {
+			font-size: 7em;
+		}
+	}
+	@media screen and (min-width: 700px) {
+		.herotitle {
+			font-size: 10em;
+		}
+	}
+	@media screen and (min-width: 950px) {
+		.herotitle {
+			font-size: 13em;
+		}
 	}
 </style>
 <section class="main">
-<h2>Techniko</h2>
-<p>Check out some websites & browser extensions <a href="https://makerwidget.com/widgets/hiayuviklmksxba0-z54bbicafujhwlc3-s0h9k5yamvczlbbf/embed-iframe-widget?position=left&version=2">here</a></p>
+<h2 class="herotitle">Techniko</h2>
+<p class="msg"><a href="https://makerwidget.com/widgets/hiayuviklmksxba0-z54bbicafujhwlc3-s0h9k5yamvczlbbf/embed-iframe-widget?position=left&version=2">Check out some websites & browser extensions</a></p>
+<p class="msg"><a href="mailto:hello@techniko.ml">Email me</a></p>
 </section>
 <script>
     (function(d, h, m){
